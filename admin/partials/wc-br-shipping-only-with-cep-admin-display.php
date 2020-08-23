@@ -8,8 +8,8 @@
  * @link       mailto:ialvsconcelos@gmail.com
  * @since      1.0.0
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/admin/partials
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/admin/partials
  */
 ?>
 

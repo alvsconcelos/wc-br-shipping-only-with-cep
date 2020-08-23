@@ -9,8 +9,8 @@
  * @link       mailto:ialvsconcelos@gmail.com
  * @since      1.0.0
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/includes
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/includes
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/includes
  * @author     Alvaro Vasconcelos - @alvsconcelos <mailto:ialvsconcelos@gmail.com>
  */
-class Woocommerce_Br_Shipping_Only_With_Cep_i18n {
+class WC_Br_Shipping_Only_With_Cep_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Woocommerce_Br_Shipping_Only_With_Cep_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'woocommerce-br-shipping-only-with-cep',
+			'wc-br-shipping-only-with-cep',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

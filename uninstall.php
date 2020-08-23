@@ -22,7 +22,7 @@
  * @link       mailto:ialvsconcelos@gmail.com
  * @since      1.0.0
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
+ * @package    WC_Br_Shipping_Only_With_Cep
  */
 
 // If uninstall not called from WordPress, then exit.

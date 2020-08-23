@@ -6,8 +6,8 @@
  * @link       mailto:ialvsconcelos@gmail.com
  * @since      1.0.0
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/public
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/public
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/public
  * @author     Alvaro Vasconcelos - @alvsconcelos <mailto:ialvsconcelos@gmail.com>
  */
-class Woocommerce_Br_Shipping_Only_With_Cep_Public
+class WC_Br_Shipping_Only_With_Cep_Public
 {
 
 	/**
@@ -67,10 +67,10 @@ class Woocommerce_Br_Shipping_Only_With_Cep_Public
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Woocommerce_Br_Shipping_Only_With_Cep_Loader as all of the hooks are defined
+		 * defined in WC_Br_Shipping_Only_With_Cep_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Woocommerce_Br_Shipping_Only_With_Cep_Loader will then create the relationship
+		 * The WC_Br_Shipping_Only_With_Cep_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -97,15 +97,15 @@ class Woocommerce_Br_Shipping_Only_With_Cep_Public
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Woocommerce_Br_Shipping_Only_With_Cep_Loader as all of the hooks are defined
+		 * defined in WC_Br_Shipping_Only_With_Cep_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Woocommerce_Br_Shipping_Only_With_Cep_Loader will then create the relationship
+		 * The WC_Br_Shipping_Only_With_Cep_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woocommerce-br-shipping-only-with-cep-public.js', array('jquery'), $this->version, false);
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wc-br-shipping-only-with-cep-public.js', array('jquery'), $this->version, false);
 	}
 
 	public function apply_correct_state()

@@ -9,8 +9,8 @@
  * @link       mailto:ialvsconcelos@gmail.com
  * @since      1.0.0
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/includes
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/includes
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/includes
  * @author     Alvaro Vasconcelos - @alvsconcelos <mailto:ialvsconcelos@gmail.com>
  */
-class Woocommerce_Br_Shipping_Only_With_Cep {
+class WC_Br_Shipping_Only_With_Cep {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Woocommerce_Br_Shipping_Only_With_Cep_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      WC_Br_Shipping_Only_With_Cep_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -67,12 +67,12 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'WOOCOMMERCE_BR_SHIPPING_ONLY_WITH_CEP_VERSION' ) ) {
-			$this->version = WOOCOMMERCE_BR_SHIPPING_ONLY_WITH_CEP_VERSION;
+		if ( defined( 'WC_BR_SHIPPING_ONLY_WITH_CEP_VERSION' ) ) {
+			$this->version = WC_BR_SHIPPING_ONLY_WITH_CEP_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'woocommerce-br-shipping-only-with-cep';
+		$this->plugin_name = 'wc-br-shipping-only-with-cep';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Woocommerce_Br_Shipping_Only_With_Cep_Loader. Orchestrates the hooks of the plugin.
-	 * - Woocommerce_Br_Shipping_Only_With_Cep_i18n. Defines internationalization functionality.
-	 * - Woocommerce_Br_Shipping_Only_With_Cep_Admin. Defines all hooks for the admin area.
-	 * - Woocommerce_Br_Shipping_Only_With_Cep_Public. Defines all hooks for the public side of the site.
+	 * - WC_Br_Shipping_Only_With_Cep_Loader. Orchestrates the hooks of the plugin.
+	 * - WC_Br_Shipping_Only_With_Cep_i18n. Defines internationalization functionality.
+	 * - WC_Br_Shipping_Only_With_Cep_Admin. Defines all hooks for the admin area.
+	 * - WC_Br_Shipping_Only_With_Cep_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-woocommerce-br-shipping-only-with-cep-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wc-br-shipping-only-with-cep-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-woocommerce-br-shipping-only-with-cep-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wc-br-shipping-only-with-cep-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-woocommerce-br-shipping-only-with-cep-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wc-br-shipping-only-with-cep-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-woocommerce-br-shipping-only-with-cep-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wc-br-shipping-only-with-cep-public.php';
 
-		$this->loader = new Woocommerce_Br_Shipping_Only_With_Cep_Loader();
+		$this->loader = new WC_Br_Shipping_Only_With_Cep_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Woocommerce_Br_Shipping_Only_With_Cep_i18n class in order to set the domain and to register the hook
+	 * Uses the WC_Br_Shipping_Only_With_Cep_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Woocommerce_Br_Shipping_Only_With_Cep_i18n();
+		$plugin_i18n = new WC_Br_Shipping_Only_With_Cep_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -151,7 +151,7 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
-		$plugin_admin = new Woocommerce_Br_Shipping_Only_With_Cep_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new WC_Br_Shipping_Only_With_Cep_Admin( $this->get_plugin_name(), $this->get_version() );
 	}
 
 	/**
@@ -163,7 +163,7 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Woocommerce_Br_Shipping_Only_With_Cep_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new WC_Br_Shipping_Only_With_Cep_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'woocommerce_calculated_shipping', $plugin_public, 'apply_correct_state' );
@@ -198,7 +198,7 @@ class Woocommerce_Br_Shipping_Only_With_Cep {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Woocommerce_Br_Shipping_Only_With_Cep_Loader    Orchestrates the hooks of the plugin.
+	 * @return    WC_Br_Shipping_Only_With_Cep_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

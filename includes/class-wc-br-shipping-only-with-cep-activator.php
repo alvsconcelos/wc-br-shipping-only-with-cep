@@ -6,8 +6,8 @@
  * @link       mailto:ialvsconcelos@gmail.com
  * @since      1.0.0
  *
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/includes
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Woocommerce_Br_Shipping_Only_With_Cep
- * @subpackage Woocommerce_Br_Shipping_Only_With_Cep/includes
+ * @package    WC_Br_Shipping_Only_With_Cep
+ * @subpackage WC_Br_Shipping_Only_With_Cep/includes
  * @author     Alvaro Vasconcelos - @alvsconcelos <mailto:ialvsconcelos@gmail.com>
  */
-class Woocommerce_Br_Shipping_Only_With_Cep_Activator {
+class WC_Br_Shipping_Only_With_Cep_Activator {
 
 	/**
 	 * Short Description. (use period)
