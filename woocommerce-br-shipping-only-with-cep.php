@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Calculo do frete somente com o CEP - Woocommerce Brasil
  * Plugin URI:        mailto:ialvsconcelos@gmail.com
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Este plugin permite à calculadora de fretes do Woocommerce identificar o Estado do cliente somente com o CEP.
  * Version:           1.0.0
  * Author:            Alvaro Vasconcelos - @alvsconcelos
  * Author URI:        mailto:ialvsconcelos@gmail.com
