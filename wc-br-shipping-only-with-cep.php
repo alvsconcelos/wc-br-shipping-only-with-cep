@@ -14,11 +14,10 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Calculo do frete somente com o CEP - WC Brasil
- * Plugin URI:        https://underbits.com.br
  * Description:       Este plugin permite à calculadora de fretes do Woocommerce identificar o Estado do cliente somente com o CEP.
  * Version:           1.0.0
  * Author:            Alvaro Vasconcelos - @alvsconcelos
- * Author URI:        mailto:ialvsconcelos@gmail.com
+ * Author URI:        https://instagram.com/alvsconcelos
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wc-br-shipping-only-with-cep
