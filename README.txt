@@ -1,6 +1,6 @@
 === Cálculo do frete somente com o CEP - WC Brasil ===
 Contributors: alvsconcelos
-Donate link: mailto:ialvsconcelos@gmail.com
+Donate link: https://pag.ae/7Wmgi7sev
 Tags: woocommerce, frete, cep, calculadora de frete, frete sem cidade, venda
 Requires at least: 5.0
 Tested up to: 5.5
