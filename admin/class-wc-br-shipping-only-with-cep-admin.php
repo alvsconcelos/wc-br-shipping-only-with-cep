@@ -20,7 +20,8 @@
  * @subpackage WC_Br_Shipping_Only_With_Cep/admin
  * @author     Alvaro Vasconcelos - @alvsconcelos <mailto:ialvsconcelos@gmail.com>
  */
-class WC_Br_Shipping_Only_With_Cep_Admin {
+class WC_Br_Shipping_Only_With_Cep_Admin
+{
 
 	/**
 	 * The ID of this plugin.
@@ -47,11 +48,11 @@ class WC_Br_Shipping_Only_With_Cep_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct($plugin_name, $version)
+	{
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-
 	}
 
 	/**
@@ -59,7 +60,8 @@ class WC_Br_Shipping_Only_With_Cep_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -73,8 +75,7 @@ class WC_Br_Shipping_Only_With_Cep_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wc-br-shipping-only-with-cep-admin.css', array(), $this->version, 'all' );
-
+		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/wc-br-shipping-only-with-cep-admin.css', array(), $this->version, 'all');
 	}
 
 	/**
@@ -82,7 +83,8 @@ class WC_Br_Shipping_Only_With_Cep_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -96,8 +98,24 @@ class WC_Br_Shipping_Only_With_Cep_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wc-br-shipping-only-with-cep-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wc-br-shipping-only-with-cep-admin.js', array('jquery'), $this->version, false);
+	}
 
+	public function check_woocommerce()
+	{
+		// If Woocommerce is not active, deactivates itself. 
+
+		if (is_admin() && current_user_can('activate_plugins') &&  !is_plugin_active('woocommerce/woocommerce.php')) {
+			add_action('admin_notices', function () {
+				echo '<div class="error"> <p>Desculpe, mas o plugin <strong>Calculo do frete somente com o CEP - WC Brasil</strong> requer o <strong>Woocommerce</strong> ativo para funcionar corretamente.</p> </div>';
+			});
+
+			deactivate_plugins(WC_BR_SHIPPING_ONLY_WITH_CEP_PATH);
+
+			if (isset($_GET['activate'])) {
+				unset($_GET['activate']);
+			}
+		}
 	}
 
 }

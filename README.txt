@@ -6,6 +6,7 @@ Requires at least: 5.0
 Tested up to: 5.5
 Stable tag: 4.3
 License: GPLv3 or later
+Requires PHP: 7.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Este plugin permite à calculadora de fretes do Woocommerce identificar o Estado (UF) do cliente somente com o CEP.
@@ -32,3 +33,7 @@ No campo de pesquisa, digite "**Cálculo do frete somente com o CEP - WC Brasil*
 
 = 1.0 =
 * Versão inicial publicada na loja. Sem bugs até então.
+
+== Screenshots ==
+
+1. Os campos de país, estado e cidade vão ser ocultados da calculadora e o campo de CEP vai ficar sempre visível.

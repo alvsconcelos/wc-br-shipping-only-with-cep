@@ -13,13 +13,13 @@
  * @package           WC_Br_Shipping_Only_With_Cep
  *
  * @wordpress-plugin
- * Plugin Name:       Calculo do frete somente com o CEP - WC Brasil
+ * Plugin Name:       Cálculo do frete somente com o CEP - WC Brasil
  * Description:       Este plugin permite à calculadora de fretes do Woocommerce identificar o Estado (UF) do cliente somente com o CEP.
  * Version:           1.0.0
  * Author:            Alvaro Vasconcelos - @alvsconcelos
  * Author URI:        https://instagram.com/alvsconcelos
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPL-3.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       wc-br-shipping-only-with-cep
  * Domain Path:       /languages
  */
@@ -35,6 +35,11 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'WC_BR_SHIPPING_ONLY_WITH_CEP_VERSION', '1.0.0' );
+
+/**
+ * Plugin root path
+ */
+define( 'WC_BR_SHIPPING_ONLY_WITH_CEP_PATH', plugin_basename(__FILE__) );
 
 /**
  * The code that runs during plugin activation.
