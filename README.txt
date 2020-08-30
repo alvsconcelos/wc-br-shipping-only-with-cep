@@ -13,7 +13,9 @@ Este plugin permite à calculadora de fretes do Woocommerce identificar o Estado
 
 == Description ==
 
-Este plugin deixa calculadora de fretes do Woocommerce sempre visível e oculta o campo Cidade e País. Ele permite à calculadora de fretes do Woocommerce identificar o Estado (UF) do cliente somente com o CEP.
+Este plugin deixa calculadora de fretes do Woocommerce sempre visível e oculta os campos de País, Estado e Cidade. Ele permite à calculadora de fretes do Woocommerce identificar o Estado (UF) do cliente somente com o CEP.
+
+O plugin não tem nenhuma tela de configuração adicional, é preciso somente ativar ele no painel Wordpress.
 
 == Installation ==
 
