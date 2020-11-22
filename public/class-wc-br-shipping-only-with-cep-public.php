@@ -68,9 +68,11 @@ class WC_Br_Shipping_Only_With_Cep_Public
 		// Register a dummy stylesheet and loads it to insert inline styles on cart.
 		wp_register_style($this->plugin_name, false);
 		wp_enqueue_style($this->plugin_name);
-
 		wp_add_inline_style($this->plugin_name, '.shipping-calculator-form{display:block!important; padding-top:0 !important;}.shipping-calculator-button {display:none!important;}');
-		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wc-br-shipping-only-with-cep-public.js', array('jquery'), $this->version, false);
+
+		if ('yes' === get_option('shippingonlywithcep_mask')) {
+			wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/shipping-only-with-cep.js', array('jquery'), $this->version, false);
+		}
 	}
 
 	public function apply_correct_state()

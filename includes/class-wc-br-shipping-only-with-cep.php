@@ -154,6 +154,8 @@ class WC_Br_Shipping_Only_With_Cep {
 		$plugin_admin = new WC_Br_Shipping_Only_With_Cep_Admin( $this->get_plugin_name(), $this->get_version() );
 		
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'check_woocommerce' );
+		$this->loader->add_filter( 'plugin_action_links_woocommerce-br-shipping-only-with-cep/wc-br-shipping-only-with-cep.php', $plugin_admin, 'filter_plugin_links', 10, 1);
+		$this->loader->add_filter( 'woocommerce_shipping_settings', $plugin_admin, 'filter_woocommerce_shipping_options', 10, 1);
 	}
 
 	/**

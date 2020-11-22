@@ -118,4 +118,33 @@ class WC_Br_Shipping_Only_With_Cep_Admin
 		}
 	}
 
+	public function filter_plugin_links($links)
+	{
+		$url = admin_url('admin.php?page=wc-settings&tab=shipping&section=options#shippingonlywithcep_mask');
+		$settings_link = "<a href='$url'>Configurações</a>";
+
+		array_unshift($links, $settings_link);
+		return $links;
+	}
+
+	public function filter_woocommerce_shipping_options($fields)
+	{
+		$fields[] = array(
+			'title' => 'Cálculo do frete somente com o CEP - WC Brasil',
+			'type'  => 'title',
+			'id'    => 'shippingonlywithcep_options',
+		);
+
+		$fields[] = array(
+			'title'         => __('Ativar máscara no campo de CEP', 'wc-br-shipping-only-with-cep'),
+			'desc'          => __('Ativa a máscara de dígitos no campo de CEP.', 'wc-br-shipping-only-with-cep'),
+			'id'            => 'shippingonlywithcep_mask',
+			'default'       => 'no',
+			'type'          => 'checkbox',
+			'checkboxgroup' => 'start',
+			'autoload'      => false,
+		);
+
+		return $fields;
+	}
 }
