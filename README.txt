@@ -1,9 +1,9 @@
 === Cálculo do frete somente com o CEP - WC Brasil ===
 Contributors: alvsconcelos
-Donate link: https://pag.ae/7Wmgi7sev
+Donate link: http://picpay.me/alvsconcelos
 Tags: woocommerce, frete, cep, calculadora de frete, frete sem cidade, venda
 Requires at least: 5.0
-Tested up to: 5.5
+Tested up to: 5.7
 Stable tag: 4.3
 License: GPLv3 or later
 Requires PHP: 7.0
@@ -15,7 +15,7 @@ Este plugin permite à calculadora de fretes do Woocommerce identificar o Estado
 
 Este plugin deixa calculadora de fretes do Woocommerce sempre visível e oculta os campos de País, Estado e Cidade. Ele permite à calculadora de fretes do Woocommerce identificar o Estado (UF) do cliente somente com o CEP.
 
-O plugin não tem nenhuma tela de configuração adicional, é preciso somente ativar ele no painel Wordpress.
+O plugin tem uma tela de configuração adicional para ativação/desativação da máscara de cep na calculadora de fretes.
 
 == Installation ==
 

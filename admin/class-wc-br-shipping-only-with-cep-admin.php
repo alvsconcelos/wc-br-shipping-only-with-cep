@@ -104,7 +104,6 @@ class WC_Br_Shipping_Only_With_Cep_Admin
 	public function check_woocommerce()
 	{
 		// If Woocommerce is not active, deactivates itself. 
-
 		if (is_admin() && current_user_can('activate_plugins') &&  !is_plugin_active('woocommerce/woocommerce.php')) {
 			add_action('admin_notices', function () {
 				echo '<div class="error"> <p>Desculpe, mas o plugin <strong>Calculo do frete somente com o CEP - WC Brasil</strong> requer o <strong>Woocommerce</strong> ativo para funcionar corretamente.</p> </div>';
