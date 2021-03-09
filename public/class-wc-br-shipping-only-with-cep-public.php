@@ -71,7 +71,7 @@ class WC_Br_Shipping_Only_With_Cep_Public
 		wp_add_inline_style($this->plugin_name, '.shipping-calculator-form{display:block!important; padding-top:0 !important;}.shipping-calculator-button {display:none!important;}');
 
 		if ('yes' === get_option('shippingonlywithcep_mask')) {
-			wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/shipping-only-with-cep.js', array('jquery'), $this->version, false);
+			wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/shipping-only-with-cep.min.js', array('jquery'), $this->version, false);
 		}
 	}
 
@@ -94,7 +94,6 @@ class WC_Br_Shipping_Only_With_Cep_Public
 		// Faixas de cep: https://help.commerceplus.com.br/hc/pt-br/articles/115008224967-Faixas-de-CEP-por-Estado
 		// HTML Table to JSON: https://www.convertjson.com/html-table-to-json.htm
 		// JSON to PHP Array: https://wtools.io/convert-json-to-php-array
-
 
 		$cep_ranges = array(
 			'Acre(AC)' =>
